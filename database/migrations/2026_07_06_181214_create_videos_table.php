@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('tema'); // Ej: "Tecnologia", "Historia", "Arte"
             $table->string('signante'); // Persona que firma o protagoniza
             $table->string('rango_edad'); // Ej: "0-3", "4-7", "8-12", "13-17", "18+"
-            $table->enum('sexo', ['masculino', 'femenino', 'otro', 'no_aplica']); // Para opciones fijas
+            $table->enum('sexo', ['masculino', 'femenino']); // Para opciones fijas
             $table->integer('duracion'); // Duracion en segundos (recomendado)
             $table->year('anho'); // Solo el anho (ej: 2025)
             $table->timestamps();// Crea campos 'created_at' y 'updated_at'
