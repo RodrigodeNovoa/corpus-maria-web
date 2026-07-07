@@ -1,6 +1,8 @@
 @extends('layouts.app')
+{{-- @extends, indica al index que toma de plantilla al layout(esquema: app.blade) --}}
 
 @section('titulo', 'Inicio - Buscador de Signos')
+{{-- @section, inyecta conteido en el esquema --}}
 
 @section('contenido')
 <div style="max-width: 600px; margin: 0 auto; text-align: center;">

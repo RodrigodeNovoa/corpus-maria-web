@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('titulo', 'Buscador de Lengua de Signos')</title>
     
+    {{-- @yield, inyecta contenido de las vistas en el esquema --}}
     {{-- Estilos globales --}}
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -26,9 +27,11 @@
         }
     </style>
     
-    {{-- Estilos adicionales por página --}}
+    {{-- Estilos adicionales por pagina --}}
     @stack('styles')
 </head>
+
+
 <body>
     {{-- Header --}}
     @include('layouts._partials.header')
