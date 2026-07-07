@@ -3,10 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VideoController;
 
-//Route::view('/', 'index')->name('index');
+
 Route::get('/', [VideoController::class, 'index'])->name('index');
+
 Route::get('/buscar', [VideoController::class, 'buscar'])->name('buscar');
 
+
+//Route::view('/', 'index')->name('index');
 
 /* Route::get('/', function () {
     return view('index');

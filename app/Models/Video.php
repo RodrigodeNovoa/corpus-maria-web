@@ -18,7 +18,9 @@ class Video extends Model
         'signante',
         'rango_edad',
         'sexo',
+        'mano',
         'duracion',
         'anho',
+        'regiones_geograficas',
     ];
 }
