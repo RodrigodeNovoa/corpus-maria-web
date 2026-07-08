@@ -52,7 +52,7 @@
         <h2 style="color: #2d3748;">
             Resultados para: "{{ $query }}"
         </h2>
-        <a href="/" style="color: #4299e1; text-decoration: none; font-weight: 500;">
+        <a href="/buscar" style="color: #4299e1; text-decoration: none; font-weight: 500;">
             ← Volver a buscar
         </a>
     </div>
@@ -79,7 +79,7 @@
         <div class="sin-resultados">
             <p style="font-size: 1.5rem; margin-bottom: 10px;">😕 No se encontraron resultados</p>
             <p>No hay videos que coincidan con "{{ $query }}"</p>
-            <a href="/" style="display: inline-block; margin-top: 20px; color: #4299e1; text-decoration: none;">
+            <a href="/buscar" style="display: inline-block; margin-top: 20px; color: #4299e1; text-decoration: none;">
                 Realizar una nueva búsqueda
             </a>
         </div>

@@ -4,9 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VideoController;
 
 
-Route::get('/', [VideoController::class, 'index'])->name('index');
+Route::get('/', [VideoController::class, 'home'])->name('home'); //Nueva Home
 
-Route::get('/buscar', [VideoController::class, 'buscar'])->name('buscar');
+Route::get('/buscar', [VideoController::class, 'index'])->name('buscar'); //Buscador, antiguo index
+
+Route::get('/resultados', [VideoController::class, 'buscar'])->name('resultados'); //Resultados, cambia el nombre de la ruta, pero no el del metodo
 
 
 //Route::view('/', 'index')->name('index');

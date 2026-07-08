@@ -7,10 +7,17 @@ use Illuminate\Http\Request;
 
 class VideoController extends Controller
 {
-     // Esta función mostrara la pagina de inicio con el formulario
+
+     // Nueva pagina de inicio con imagen y texto
+    public function home()
+    {
+        return view('home');
+    }
+
+     // Esta funcion mostrara la pagina de busqueda (antigua pg de inicio)
     public function index()
     {
-        return view('index'); // Busca resources/views/index.blade.php
+        return view('buscar'); // Busca resources/views/index.blade.php
     }
 
     // Esta funcion procesara la busqueda y mostrara los resultados

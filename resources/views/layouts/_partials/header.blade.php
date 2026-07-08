@@ -4,8 +4,9 @@
             <h1 style="font-size: 1.5rem;">🔍 Corpus Maria Web</h1>
         </a>
         <nav>
-            <a href="/" style="color: #4a5568; text-decoration: none; margin-left: 20px;">Inicio</a>
-            <a href="#" style="color: #4a5568; text-decoration: none; margin-left: 20px;">Acerca de</a>
-        </nav>
+            <a href="{{ route('home') }}" style="color: #4a5568; text-decoration: none; margin-left: 20px; padding: 8px 16px; border-radius: 6px; transition: background 0.3s;" onmouseover="this.style.background='#edf2f7'" onmouseout="this.style.background='transparent'">Inicio</a>
+            <a href="{{ route('buscar') }}" style="color: #4a5568; text-decoration: none; margin-left: 20px; padding: 8px 16px; border-radius: 6px; transition: background 0.3s;" onmouseover="this.style.background='#edf2f7'" onmouseout="this.style.background='transparent'">Buscador</a>
+            <a href="#" style="color: #4a5568; text-decoration: none; margin-left: 20px; padding: 8px 16px; border-radius: 6px; transition: background 0.3s;" onmouseover="this.style.background='#edf2f7'" onmouseout="this.style.background='transparent'">Acerca de</a>
+      </nav>
     </div>
 </header>
