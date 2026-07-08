@@ -24,13 +24,47 @@ class VideoController extends Controller
     public function buscar(Request $request)
     {
         $query = $request->input('query'); // Obtiene el termino de busqueda
+        $sexo = $request->input('sexo'); //Filtro sexo
+        $region = $request->input('region'); //Filtro region
+        $mano = $request->input('mano'); //Filtro mano
 
-        // Realiza la busqueda en la base de datos
-        $videos = Video::where('titulo', 'LIKE', '%' . $query . '%')
-                    ->orWhere('descripcion', 'LIKE', '%' . $query . '%')
-                    ->get();
+        // Construir la consulta base
+        $videos = Video::query();
+    
+         // Filtro por título/descripción
+        if ($query) {
+            $videos->where(function ($q) use ($query) {
+                $q->where('titulo', 'LIKE', '%' . $query . '%')
+                  ->orWhere('descripcion', 'LIKE', '%' . $query . '%');
+            });
+        }
+    
+        // Filtro por Sexo
+        if ($sexo) {
+            $videos->where('sexo', $sexo);
+        }
+        
+        // Filtro por Región Geográfica
+        if ($region) {
+            $videos->where('regiones_geograficas', $region);
+        }
+        
+        // Filtro por Mano
+        if ($mano) {
+            $videos->where('mano', $mano);
+        }
+        
+        // Obtener resultados
+        $videos = $videos->get();
+
 
         // Retorna la vista de resultados con los videos encontrados
         return view('resultados', compact('videos', 'query'));
     }
+        /**
+         * //Busqueda sin filtros en la base de datos
+         * $videos = Video::where('titulo', 'LIKE', '%' . $query . '%')
+         * ->orWhere('descripcion', 'LIKE', '%' . $query . '%')
+         * ->get();
+         */
 }
