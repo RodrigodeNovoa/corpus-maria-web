@@ -58,12 +58,15 @@
 @section('contenido')
 <div class="contenedor-principal">
     
-    {{-- 🔹 Tarjeta de presentación principal --}}
+    {{--  Tarjeta de presentacion principal --}}
     <div class="seccion-presentacion">
         <x-tarjeta-inicio
             titulo="🌍 Descubre el mundo de la Lengua de Signos"
-            contenido="SignosWeb es un buscador especializado que te permite explorar videos, imágenes e información sobre la lengua de signos en español. Aprende, investiga y conecta con la comunidad sorda."
-            imagen="assets/img/elden.jpg"
+            contenido="Este espacio ha sido creado para poner a disposición de la comunidad investigadora, docente y del público en general el primer corpus de la Lengua de Señas Colombiana que documenta la riqueza de sus variedades dialectales.
+                        <br><br> COLOmbiaSigna (COLOS) nace con la vocación de ser un punto de encuentro y consulta, donde la diversidad lingüística del país se refleja en el discurso signado de sus hablantes. En esta web encontrarán un registro audiovisual cuidadosamente seleccionado, proveniente de las seis regiones naturales de Colombia, con el propósito de ofrecer una muestra viva y representativa de la LSC.
+                        <br><br> Invitamos a estudiantes, intérpretes, lingüistas y a todas las personas interesadas en nuestra lengua a explorar este material. El corpus se concibe como una herramienta abierta para el análisis, el aprendizaje y la valoración de la herencia cultural y lingüística de las comunidades sordas del país. Navegar por él es, en sí mismo, un viaje por las formas diversas en que la LSC se expresa, se transmite y se transforma en cada territorio.
+                        "
+            imagen="assets/img/corpus_manos.jpg"
             alt="Lengua de Signos - Imagen representativa"
             enlace="{{ route('buscar') }}"
             enlaceTexto="🔍 Comenzar a buscar"
@@ -71,8 +74,8 @@
         />
     </div>
     
-    {{-- 🔹 Tarjeta secundaria (ejemplo de uso con otro contenido) --}}
-    <div style="margin-bottom: 40px;">
+    {{--  Tarjeta secundaria (ejemplo de uso con otro contenido) --}}
+    {{-- <div style="margin-bottom: 40px;">
         <x-tarjeta-inicio
             titulo="📚 Recursos educativos"
             contenido="Accede a una amplia colección de materiales didácticos sobre lengua de signos. Perfecto para estudiantes, docentes y cualquier persona interesada en aprender."
@@ -83,9 +86,9 @@
             anchoImagen="80%"
             clase="tarjeta-secundaria"
         />
-    </div>
+    </div> --}}
     
-    {{-- 🔹 Sección de características (sin componente, porque son elementos más pequeños) --}}
+    {{--  Seccion de caracteristicas (sin componente, porque son elementos mas pequenhos) --}}
     <div class="seccion-features">
         <div class="feature-item">
             <span class="icono">🎥</span>

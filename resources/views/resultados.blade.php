@@ -52,7 +52,7 @@
         <h2 style="color: #2d3748;">
             Resultados para: "{{ $query }}"
         </h2>
-        <a href="{{ route('buscar') }}?sexo={{ request('sexo') }}&region={{ request('region') }}&mano={{ request('mano') }}&query={{ request('query') }}" 
+        <a href="{{ route('buscar') }}?sexo={{ request('sexo') }}&region={{ request('region') }}&mano={{ request('mano') }}&query={{ request('query') }}"
             style="color: #4299e1; text-decoration: none; font-weight: 500;">
              ← Volver a buscar
         </a>

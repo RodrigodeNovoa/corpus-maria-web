@@ -30,7 +30,7 @@
 
     @if($imagen)
         <div style="text-align: center; margin-bottom: 20px;">
-            <img 
+            <img
                 src="{{ asset($imagen) }}"
                 alt="{{ $alt }}"
                 style="
@@ -52,7 +52,7 @@
             text-align: center;
             margin-bottom: 20px;
         ">
-            {{ $contenido }}
+            {!! $contenido !!}
         </div>
     @endif
 
